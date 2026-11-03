@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#16091f">
+
+    <title>Una pequeña casualidad</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Iconos SVG -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <canvas id="starCanvas"></canvas>
+    <main class="container">
+        <section id="welcome" class="screen active">
+
+            <div class="flower">
+                <i data-lucide="flower-2"></i>
+            </div>
+            <h1>Una pequeña casualidad...</h1>
+            <p>
+                Hay algo que me gustaría compartir contigo.
+            </p>
+            <button onclick="startStory()">
+                Descubrir
+                <i data-lucide="sparkles"></i>
+            </button>
+        </section>
+
+        <section id="story" class="screen">
+
+            <div class="small-heart">
+                <i data-lucide="heart"></i>
+            </div>
+
+            <h1>No sé qué nos espera...</h1>
+
+            <p class="story-text">
+                Pero hay algo que sí sé:
+                me está gustando la idea de conocerte
+                un poquito más.
+            </p>
+
+            <p class="story-text">
+                No quiero adelantar capítulos,
+                ni imaginar un final antes de tiempo.
+                Prefiero disfrutar las pequeñas conversaciones,
+                descubrir tus gustos, tus ocurrencias
+                y esas cosas que te hacen ser tú.
+            </p>
+
+            <p class="story-text">
+                Porque a veces las historias más bonitas
+                comienzan simplemente con dos personas
+                que deciden darse la oportunidad
+                de conocerse.
+            </p>
+
+            <button onclick="showQuestion()">
+                Tengo una pregunta...
+                <i data-lucide="mail"></i>
+            </button>
+
+        </section>
+
+        <section id="question" class="screen">
+
+            <div class="question-heart">
+                <i data-lucide="heart"></i>
+            </div>
+
+            <h1>Y entonces...</h1>
+
+            <p class="question-text">
+                No sé si el destino nos cruzó por casualidad
+                o si tenía algo bonito preparado...
+
+                Pero si seguimos descubriéndonos,
+                compartiendo momentos y creando recuerdos,
+                ¿te gustaría que poco a poco dejáramos de ser
+                dos personas conociéndose para convertirnos
+                en algo más?
+            </p>
+
+            <div class="buttons">
+
+                <button class="yes-button" onclick="sayYes()">
+                    SÍ
+                </button>
+
+                <button class="no-button" onclick="sayNo()">
+                    NO
+                </button>
+
+            </div>
+
+        </section>
+
+        <section id="finalScreen" class="screen final-screen">
+
+            <div class="big-heart">
+
+                <svg viewBox="0 0 100 100"
+                     xmlns="http://www.w3.org/2000/svg">
+
+                    <path d="
+                        M50 88
+                        C40 78 8 55 8 31
+                        C8 7 39 0 50 24
+                        C61 0 92 7 92 31
+                        C92 55 60 78 50 88Z
+                    "/>
+
+                </svg>
+
+            </div>
+
+            <h1>¡Qué bonito!</h1>
+
+            <p>
+                Entonces vamos paso a paso...
+                Me encantará descubrir más de ti.
+            </p>
+
+            <p class="final-message">
+                No sé dónde nos llevará esto,
+                pero me gustaría descubrirlo contigo,
+                una conversación a la vez.
+            </p>
+
+            <div class="sparkles">
+
+                <i data-lucide="sparkles"></i>
+
+                <i data-lucide="heart"></i>
+
+                <i data-lucide="sparkles"></i>
+
+            </div>
+
+            <button class="restart-button" onclick="restartStory()">
+                <i data-lucide="refresh-cw"></i>
+                Volver a empezar
+            </button>
+
+        </section>
+
+        <section id="noScreen" class="screen">
+
+            <div class="no-heart">
+                <i data-lucide="flower-2"></i>
+            </div>
+
+            <h1>Está bien</h1>
+
+            <p>
+                Gracias por tomarte el tiempo
+                de leer esto.
+            </p>
+
+            <p>
+                No hay presión, las cosas bonitas
+                también necesitan libertad.
+            </p>
+
+            <p>
+                Te deseo un día muy bonito.
+            </p>
+
+            <button class="restart-button" onclick="restartStory()">
+                <i data-lucide="refresh-cw"></i>
+                Volver a empezar
+            </button>
+
+        </section>
+
+    </main>
+    
+    <!-- SDK de EmailJS (debe ir antes de script.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
